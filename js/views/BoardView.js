@@ -1,13 +1,9 @@
 YUI.add('pinboard-board-view', function (Y) {
 
 	BoardView = Y.Base.create('boardView', Y.View, [] , {
-		container: '<li class="request-item"></li>',
-		
-		template: '<div>{title} {bugzilla}</div>',
-		
+				
 		initializer: function(){
-			var model = this.model;
-			model.after('change', this.render, this);
+			
 		},
 		
 		render: function(){

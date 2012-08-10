@@ -16,6 +16,11 @@ body {
 	position: absolute;
 }
 
+.pin::after {
+	content: "";
+	clear: both;
+}
+
 .pin .source {
 	margin-top: 10px;
 	color: #AD9C9C;

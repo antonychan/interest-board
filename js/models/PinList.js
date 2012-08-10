@@ -52,16 +52,6 @@ YUI.add('pinboard-pin-list', function (Y) {
 						source: "AFP"
 					},
 					{
-						title: "Secret Service Veteran Dismisses 'Blackmail' Concerns in Colombia Scandal",
-						image: "http://l.yimg.com/bt/api/res/1.2/.lowh4egvz4r07CuVDWCsA--/YXBwaWQ9eW5ld3M7Y2g9MzYwO2NyPTE7Y3c9NjQwO2R4PTA7ZHk9MDtmaT11bGNyb3A7aD0xMDc7cT04NTt3PTE5MA--/http://media.zenfs.com/en_us/News/us.news.abcnews.otus/ht_bill_clinton_dan_emmett_jt_120415_wmain.jpg",
-						source: "AFP"
-					},
-					{
-						title: "Analysis: China currency move nails hard landing risk coffin",
-						image: "http://l.yimg.com/bt/api/res/1.2/6cMxWIWAMQSh9hAuThLJAQ--/YXBwaWQ9eW5ld3M7Y2g9MzE2O2NyPTE7Y3c9NDUwO2R4PTA7ZHk9MDtmaT11bGNyb3A7aD0xMzQ7cT04NTt3PTE5MA--/http://media.zenfs.com/en_us/News/Reuters/2012-04-15T083413Z_3_CBRE83E0A4T00_RTROPTP_2_CNEWS-US-CHINA-ECONOMY-CURRENCY.JPG",
-						source: "Associated Press"
-					},
-					{
 						title: "Norway Shooter Anders Breivik Pleads Not Guilty, Cries in Court",
 						image: "http://l.yimg.com/bt/api/res/1.2/09wzN5zj33znsegyTHJe_g--/YXBwaWQ9eW5ld3M7Y2g9MzYwO2NyPTE7Y3c9NjQwO2R4PTA7ZHk9MDtmaT11bGNyb3A7aD0xMDc7cT04NTt3PTE5MA--/http://media.zenfs.com/en_us/gma/us.abcnews.go.com/ap_anders_breivik_court_thg_120206_wmain.jpg",
 						source: "Associated Press"
