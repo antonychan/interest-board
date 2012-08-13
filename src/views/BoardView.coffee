@@ -5,7 +5,7 @@ YUI().use "node", (Y) ->
 		initializer : ->
 
 		render : ->
-			test = 1
+			test = 2
 
 
 	}, '0.0.1', {
