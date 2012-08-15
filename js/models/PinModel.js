@@ -6,10 +6,6 @@ YUI.add('pinboard-pin-model', function (Y) {
 		
 		initializer: function(){
 			
-		},
-		
-		test: function(){
-			console.log("test");
 		}
 		
 	}, {

@@ -6,7 +6,7 @@ body {
 	padding :10px;
 }
 
-.pin {
+#appview .pin {
 	width: 192px;
 	padding: 15px 15px 0;
 	font-size: 11px;
@@ -16,12 +16,12 @@ body {
 	position: absolute;
 }
 
-.pin::after {
+#appview .pin::after {
 	content: "";
 	clear: both;
 }
 
-.pin .source {
+#appview .pin .source {
 	margin-top: 10px;
 	color: #AD9C9C;
 	margin: 0 -15px;
@@ -29,14 +29,14 @@ body {
 	background-color: #F2F0F0;
 }
 
-.pin p.title {
+#appview .pin p.title {
 	font-size: 11px;
 	margin: 10px 0 5px;
 	overflow: hidden;
 	word-wrap: break-word;
 }
 
-.pin .actions {
+#appview .pin .actions {
 	position: absolute;
 	top: 0;
 }

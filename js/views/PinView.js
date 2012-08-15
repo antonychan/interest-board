@@ -1,7 +1,6 @@
 YUI.add('pinboard-pin-view', function (Y) {
 
 	PinView = Y.Base.create('pinView', Y.View, [] , {
-		//container: Y.Node.create('<div class="pin"/>'),
 		
 		template: Y.one("#pin-view").getContent(),
 		
@@ -13,25 +12,20 @@ YUI.add('pinboard-pin-view', function (Y) {
 		render: function(){
 			var container = this.get('container'),
 				model = this.get('model'),
-				content,
 				html = Y.Lang.sub(this.template, model.toJSON());
 			
 			container.setContent(html);
 			
-			Y.one("#appview").append(container);
-
 			container.one("img").on('load', function(e){
-				if(model.get("prev")){
-					model.set("y", (model.get("prev").get("height")) + (model.get("prev").get("y")) + (20));
+				var previousPin = model.get("prev");
+
+				if(previousPin){
+					model.set("y", (previousPin.get("height")) + (previousPin.get("y")) + (20));
 				}
 				else {
 					model.set("y", 20);
 				}
-				model.set("height", parseInt(container.one(".pin").getComputedStyle('height')) + 15);
-			});
-			
-			container.one("img").on('error', function(e){
-				console.log("hi");
+				model.set("height", parseInt(container.one(".pin").getComputedStyle('height'), 10) + 15);
 			});
 			
 			return this;
