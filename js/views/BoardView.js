@@ -33,23 +33,32 @@ YUI.add('pinboard-board-view', function (Y) {
 
 			Y.Array.each(models, function(model){
 				var view,
-					columnPosition = (count % columns);
+					columnPosition = (count % columns),
+					previousPin;
 				
 				model.set("x", (columnPosition * pinWidth) + (padding * columnPosition) + horizontalPadding);
 				
 				if(row != 0){
-					model.set("prev", (models[count - columns]));
-					models[count - columns].set("next", model);
+					// The previous vertical Pin in relation to the current pin.
+					// This is needed to set the vertical position of the current pin
+					previousPin = models[count - columns];
+
+					// Set the previous vertical pin
+					model.set("prev", previousPin); 
+
+					// Set the next vertical pin on the previous Pin
+					previousPin.set("next", model);
 				}
 
 				view = new Y.Pinboard.PinView({
 					model: model
 				}).render().get("container");
 
-				count = count + 1;
+				count++;
 			
+				// Advance to next row if we're at the last item
 				if((count%columns) === 0){
-					row = row + 1;
+					row++;
 				}
 
 				fragment.append(view);
@@ -61,7 +70,7 @@ YUI.add('pinboard-board-view', function (Y) {
 	},{
 		ATTRS: {
 			pageWidth: { value: 1024 },
-			pinWidth: { value: 222 },
+			pinWidth: { value: 220 },
 
 			columns: { value: 5 },
 			padding: { value: 20 },

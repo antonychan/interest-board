@@ -16,15 +16,22 @@ YUI.add('pinboard-pin-view', function (Y) {
 			
 			container.setContent(html);
 			
+			// When the image is done loading, force the Pin to 
+			// rearrange itself appropriately on the board
 			container.one("img").on('load', function(e){
 				var previousPin = model.get("prev");
 
+				// Check to see if we are on the first row
 				if(previousPin){
+					// If we are NOT on the first row, set the vertical position of this Pin
+					// in relation to the previous pin
 					model.set("y", (previousPin.get("height")) + (previousPin.get("y")) + (20));
 				}
 				else {
 					model.set("y", 20);
 				}
+
+				// Set the height of this Pin based on the computed style (after the image loads)
 				model.set("height", parseInt(container.one(".pin").getComputedStyle('height'), 10) + 15);
 			});
 			

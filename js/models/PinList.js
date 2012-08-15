@@ -1,7 +1,5 @@
 YUI.add('pinboard-pin-list', function (Y) {
-	
-	var WS_URL = 'http://localhost';
-	
+		
 	PinList = Y.Base.create('pinList', Y.ModelList, [], {
 		
 		model: PinModel,

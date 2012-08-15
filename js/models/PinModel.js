@@ -1,7 +1,5 @@
 YUI.add('pinboard-pin-model', function (Y) {
-	
-	var CONSTANTS;
-	
+		
 	PinModel = Y.Base.create('pinModel', Y.Model, [], {
 		
 		initializer: function(){
@@ -15,10 +13,10 @@ YUI.add('pinboard-pin-model', function (Y) {
 			image: {value: ''},
 			source: {value: ''},
 			comments: {value: []},
-			x: { value: 0 },
-			y: { value: 0 },
-			prev: { },
-			next: { }
+			x: { value: 0 }, // horizontal position on the page used for absolute positioning
+			y: { value: 0 }, // vertical position on the page 
+			prev: { }, // stores a reference to the previous veritcal Pin
+			next: { } // reference to the next Pin
 		}
 	});
 	
